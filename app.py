@@ -12,7 +12,6 @@ import pandas as pd
 from io import StringIO
 import pdfplumber
 import openai
-from openai import OpenAI
 from langchain_community.document_loaders import PyMuPDFLoader
 from streamlit_pdf_viewer import pdf_viewer
 import base64
@@ -20,8 +19,8 @@ import fitz
 import time
 from datetime import datetime, timedelta
 
-os.environ["OPENAI_API_KEY"] = "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"
-# api_key = st.secrets["openai"]["OpenAI_key"]
+#os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = st.secrets["openai"]["OpenAI_key"]
 #os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 st.set_page_config(layout="wide", page_title="Voronoi Label Studio🧑‍💻")
 
